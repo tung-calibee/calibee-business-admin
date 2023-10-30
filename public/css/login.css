@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::placeholder { 
+    color: #c6cacd !important;     
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-left{
+    background-image: url("../images/vesinh.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    image-rendering: pixelated;
+}
+
+.disable-button{
+    opacity: 0.8;
+}
+
+.left-padding{
+    padding: 0 14% 20% 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-login{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.password-input, .email-input{
+    height: 72px !important; 
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.password-input:focus, .email-input:focus {
+    border: 2px solid #71D399 !important;
+    box-shadow: none;
+}
+
+.text-form{
+    font-size: 16px;  
+    line-height: 22.40px; 
+    letter-spacing: 0.20px; 
+    word-wrap: break-word; 
+}
+
+.text-14{
+    font-size: 14px; 
+    line-height: 19.60px; 
+    letter-spacing: 0.20px; 
+    word-wrap: break-word;
+}
+
+.text-16{
+    font-size: 16px; 
+    line-height: 22.40px; 
+    letter-spacing: 0.20px; 
+    word-wrap: break-word;
+}
+
+.form-title{
+    color: #12B555; 
+    font-size: 48px; 
+    font-weight: 700; 
+    line-height: 57.60px; 
+    word-wrap: break-word
+}
+
+.checkbox{
+    width: 20px; 
+    height: 20px; 
+    left: 2px; 
+    top: 2px; 
+    border: 2px #6B7075 solid;
+    border-radius: 4px; 
+}
+
+.icon{
+    width: 24px; 
+    height: 24px; 
+    padding-left: 3px 2px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+  @media screen and (min-width: 1300px) {
+    
+   
+    
+}
