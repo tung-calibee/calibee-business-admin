@@ -17,14 +17,28 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/booking', function () {
-    return view('booking.index');
+Route::group([
+    'as'     => 'booking.',
+    'prefix' => 'booking',
+], function () {
+    Route::get('/', function () {
+        return view('booking.index');
+    })->name('index');
+    
+    Route::get('/detail', function () {
+        return view('booking.detail');
+    })->name('detail');
+    
+    Route::get('/job', function () {
+        return view('booking.job');
+    })->name('job');
 });
 
-Route::get('/booking/detail', function () {
-    return view('booking.detail');
-});
-
-Route::get('/booking/job', function () {
-    return view('booking.job');
+Route::group([
+    'as'     => 'company.',
+    'prefix' => 'company',
+], function () {
+    Route::get('/', function () {
+        return view('company.index');
+    })->name('index');
 });

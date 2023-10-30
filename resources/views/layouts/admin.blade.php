@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Calibee for Business</title>
+    <title>Calibee for Enterprise</title>
     <meta name="description" content="Calibee for business">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="version" content="GFB-webapp-v0.0.1">
-    <link rel="icon" type="image/x-icon" href="{{asset('images/favicon.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{asset('images/favicon.svg') }}">
     <link href="{{ asset('css/6373.7e13f531f8.chunk.css') }}" rel="stylesheet">
     <link href="{{ asset('css/3309.b482f42c.chunk.css') }}" rel="stylesheet">
     <link href="{{ asset('css/8090.07671a41.chunk.css') }}" rel="stylesheet">
@@ -14,7 +14,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
+    @yield('css')
     <style>
+        
         *{
             font-family: 'Roboto', sans-serif;
         }
@@ -39,7 +41,6 @@
         </div>
     </div>
     @stack('javascript')
-    @stack('booking-detail')
     @stack('job-detail')
 </body>
 </html>

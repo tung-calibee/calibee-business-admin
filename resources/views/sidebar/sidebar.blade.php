@@ -2,7 +2,7 @@
     <div class="AppSider__sider___2QGX3 ant-layout-sider"
         style="flex: 0 0 280px; max-width: 280px; min-width: 280px; width: 280px;">
         <div class="ant-layout-sider-children"><a class="AppSider__logoWrapper___2kvqF"
-                href="booking-calibeebusiness.html">
+                href="{{route('booking.index')}}">
                 <img src="{{URL::asset('/images/calibee_logo.png')}}" style="width: auto; height: 27px;">
             </a>
             <div class="AppSider__scrollContainer___1CDYa">
@@ -14,10 +14,14 @@
                             <span class="MenuLabel__menuLabel___1ZtQ6">Dashboard</span>
                         </span>
                     </li>
-                    <li class="ant-menu-item-selected ant-menu-item" role="menuitem" aria-selected="true">
-                        <a style="color: #005339 !important;" href="booking-calibeebusiness.html">
+                    <li class="{{ Request::is('booking') ? 'ant-menu-item-selected' : '' }} ant-menu-item" role="menuitem" aria-selected="true">
+                        <a style="{{ Request::is('booking') ? 'color: #005339 !important;' : '' }}" href=" {{ route('booking.index') }}">
                             <span> 
-                                <span><img src="{{URL::asset('/images/Paper.svg')}}"> </span>
+                                @php
+                                    $imagePath = Request::is('booking*') ? 'Paper.svg' : 'Paper.png';
+                                    $imageUrl = asset('images/' . $imagePath);
+                                @endphp
+                                <span><img src="{{URL::asset($imageUrl)}}"> </span>
                                 <span class="MenuLabel__menuLabel___1ZtQ6">Bookings</span>
                             </span>
                         </a>
@@ -48,10 +52,14 @@
                             <span class="MenuLabel__menuLabel___1ZtQ6">Settings</span>
                         </span>
                     </li>
-                    <li class="ant-menu-item" role="menuitem" aria-selected="false">
-                        <a href="company-profile.html">
+                    <li class="{{ Request::is('company') ? 'ant-menu-item-selected' : '' }} ant-menu-item" role="menuitem" aria-selected="false">
+                        <a style="{{ Request::is('company') ? 'color: #005339 !important;' : '' }}" href=" {{ route('company.index') }} ">
                             <span>
-                                <span><img src="{{URL::asset('/images/solar_buildings-outline.svg')}}"></span>
+                                @php
+                                    $imagePath = Request::is('company*') ? 'solar_buildings-bold.svg' : 'solar_buildings-outline.svg';
+                                    $imageUrl = asset('images/' . $imagePath);
+                                @endphp
+                                <span><img src="{{URL::asset($imageUrl)}}"></span>
                                 <span class="MenuLabel__menuLabel___1ZtQ6">Company profile</span>
                             </span>
                         </a>

@@ -1,50 +1,53 @@
 @extends('layouts.admin')
+
+@section('css')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/booking/index.css') }}">
+@endsection
 @section('content')
 <div class="gfb-root-styles_root__oFJST">
     <main class="activity_root__2BPP9">
         <section class="activity_tableArea__q2Cep" style="color: #000; background-color: #f5f5f5;">
             <div class="bg-white rounded-[8px] overflow-hidden shadow-level-1">
-                <h5 style="padding: 24px 0;">
+                <div style="padding: 24px 0;">
                     <div style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-start; gap: 64px; display: inline-flex">
-                        <div style="width: 592px; align-self: stretch; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-                            <div style="width: 165px; align-self: stretch; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 8px; border: 1px #C6CACD solid; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-                                <div style="flex: 1 1 0; color: #2E3238; font-size: 14px; font-family: Roboto; font-weight: 600; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">All Bookings</div>
+                        <div class="card-container" >
+                            <div class="card" style="width: 165px">
+                                <div class="card-content">All Bookings</div>
                                 <img src="{{ asset('images/Arrow - Down 2.svg') }}">
                             </div>
-                            <div style="width: 294px; align-self: stretch; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 8px; border: 1px #C6CACD solid; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-                                <div style="flex: 1 1 0; height: 24px; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+                            <div style="width: 294px;" class="card" >
+                                <div class="event-info">
                                     <img src="{{ asset('images/event.svg') }}">
-                                    <div style="flex: 1 1 0; color: #2E3238; font-size: 14px; font-family: Roboto; font-weight: 600; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">31/08/2023 - 29/09/2023</div>
-                          
+                                    <div class="card-content">31/08/2023 - 29/09/2023</div>
                                 </div>
-                                <div style="justify-content: flex-end; align-items: center; gap: 8px; display: flex">
+                                <div class="arrow-icon" >
                                     <div style="width: 24px; height: 24px; justify-content: center; align-items: center; display: flex">
                                         <img src="{{ asset('images/Arrow - Down 2.svg') }}">
                                     </div>
                                 </div>
                             </div>
-                            <div style="width: 101px; align-self: stretch; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 8px; border: 1px #C6CACD solid; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
-                                <div style="justify-content: flex-end; align-items: center; gap: 8px; display: flex">
+                            <div class="card" style="width: 101px; gap: 8px;">
+                                <div class="arrow-icon">
                                     <div style="width: 24px; height: 24px; position: relative">
                                         <img src=" {{ asset('images/tune.svg') }}">
                                     </div>
                                 </div>
-                                <div style="color: #2E3238; font-size: 14px; font-family: Roboto; font-weight: 600; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">Filters</div>
+                                <div class="input-label">Filters</div>
                             </div>
                         </div>
                         
-                        <div style="flex: 1 1 0; height: 44px; flex-direction: column; justify-content: center; align-items: flex-end; gap: 8px; display: inline-flex">
-                            <div style="flex: 1 1 0; justify-content: flex-start; align-items: center; gap: 16px; display: inline-flex">
-                                <div style="width: 300px; align-self: stretch; justify-content: center; align-items: center; display: flex">
-                                    <div style="width: 149px; align-self: stretch; justify-content: flex-start; align-items: center; display: flex">
+                        <div class="footer-container" >
+                            <div class="search-bar">
+                                <div class="input-container">
+                                    <div class="input-wrapper" style="width: 149px;">
                                         <div style="width: 149px; align-self: stretch; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-bottom-left-radius: 8px; border-top-left-radius: 8px; border: 1px #C6CACD solid; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-                                            <div style="color: #2E3238; font-size: 14px; font-family: Roboto; font-weight: 600; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">Mã Booking</div>
+                                            <div class="input-label">Mã Booking</div>
                                           <img src="{{ asset('images/Arrow - Down 2.svg') }}">
                                         </div>
                                     </div>
-                                    <div style="flex: 1 1 0; align-self: stretch; justify-content: flex-start; align-items: center; display: flex">
-                                        <div style="flex: 1 1 0; align-self: stretch; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-bottom-right-radius: 8px; border-top-right-radius: 8px; border-top: 1px #C6CACD solid; border-right: 1px #C6CACD solid; border-bottom: 1px #C6CACD solid; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-                                            <div style="flex: 1 1 0; color: #888D92; font-size: 14px; font-family: Roboto; font-weight: 400; line-height: 20px; word-wrap: break-word">Search</div>
+                                    <div class="input-wrapper" style="flex: 1 1 0;">
+                                        <div class="search-input" >
+                                            <div style="flex: 1 1 0; color: #888D92; font-weight: 400; line-height: 20px; word-wrap: break-word">Search</div>
                                             <div style="justify-content: flex-end; align-items: center; gap: 8px; display: flex">
                                                 <div style="width: 24px; height: 24px; position: relative">
                                                     <img src="{{ asset('images/search.svg') }}">
@@ -53,15 +56,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div style="height: 44px; padding-left: 16px; padding-right: 16px; padding-top: 12px; padding-bottom: 12px; background: #12B555; border-radius: 8px; justify-content: center; align-items: center; gap: 10px; display: flex">
-                                    <div style="flex: 1 1 0; text-align: center; color: white; font-size: 14px; font-family: Roboto; font-weight: 700; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">Download</div>
+                                <div class="download-button">
+                                    <div class="download-btn">Download</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </h5>
-                <div style="width: 100%; padding: 20px 16px; border: 1px solid #ccc; border-bottom: none;  border-top-left-radius: 5px; border-top-right-radius: 5px; background-color: #fff;">
-                    <div style="color: #212121; font-size: 20px; font-family: Roboto; font-weight: 700; line-height: 24px; word-wrap: break-word">All Bookings</div>
+                </div>
+                <div class="header-container">
+                    <div class="header-content">
+                        <div class="header-title">All Bookings</div>
+                    </div>
                 </div>
                 <div style="background-color: #fff; border: 1px solid #ccc; border-top: none;" class="table_root__3n85C border-t border-t-neutral-75 -mt-[1px] table_pointerCursor__VnewE gfbs-table-wrapper">
                     <div class="gfbs-spin gfbs-spin-large gfbs-spin-block gfbs-spin-hidden">
@@ -203,31 +208,31 @@
                             <img style="width: 16px;" src="{{ asset('images/Arrow - Down 2 - gray61.svg') }}">
                             </span></div>
                     </div>
-                    <div class="pagination_root__2yFTb"
-                        >
-                        <div style="width: 100%; height: 100%; padding-left: 36px; padding-right: 36px; padding-top: 24px; padding-bottom: 24px; justify-content: flex-end; align-items: center; gap: 48px; display: inline-flex">
-                            <div style="justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
-                                <div style="padding: 5px; border-radius: 4px; border: 1px #EEEEEE solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+                    <div class="pagination_root__2yFTb">
+                        <div class="pagination-container">
+                            <div class="pagination-main" style="gap: 12px;">
+                                <div class="pagination-main pagination-icon">
                                     <div style="width: 18px; height: 18px; justify-content: center; align-items: center; display: flex">
                                         <img src="{{ asset('images/Arrow - Left 2.svg') }}" alt="">
                                     </div>
                                 </div>
-                                <div style="width: 28px; padding: 4px; background: #12B555; border-radius: 4px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-                                    <div style="color: white; font-size: 10px; font-family: Roboto; font-weight: 500; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">1</div>
-                                </div>
-                                <div style="width: 28px; padding: 4px; border-radius: 4px; border: 1px #EEEEEE solid; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-                                    <div style="color: #616161; font-size: 10px; font-family: Roboto; font-weight: 500; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">2</div>
-                                </div>
-                                <div style="width: 28px; padding: 4px; border-radius: 4px; border: 1px #EEEEEE solid; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-                                    <div style="color: #616161; font-size: 10px; font-family: Roboto; font-weight: 500; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">3</div>
-                                </div>
-                                <div style="padding: 5px; border-radius: 4px; border: 1px #EEEEEE solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+                                <div class="pagination-number active">
+                                    1
+                                 </div>
+                                 <div class="pagination-number">
+                                     2
+                                 </div>
+                                 <div class="pagination-number">
+                                     3
+                                 </div>
+                                <div class="pagination-main pagination-icon">
                                     <div style="width: 18px; height: 18px; justify-content: center; align-items: center; display: flex">
                                         <img src= "{{ asset('images/Arrow - Right 2.svg') }}" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -396,7 +401,7 @@
      var menuItems = document.querySelectorAll('.gfbs-table-row');
      var secondMenuItem = menuItems[2];
      secondMenuItem.addEventListener('click', function(event) {
-         window.location.href = 'job-detail-calibeebusiness.html'; 
+        window.location.href = "{{ route('booking.job') }}" ; 
      });
   </script>
 @endpush

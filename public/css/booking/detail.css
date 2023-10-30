@@ -1,0 +1,253 @@
+.tabbing{
+    width: 25%; 
+    height: 100%;
+    margin-left: 10px;
+    border-radius: 24px; 
+    overflow: hidden; 
+    border: 1px #E0E0E0 solid; 
+    justify-content: flex-start; 
+    align-items: center; 
+    display: inline-flex;
+    background-color: #fff;
+}
+
+#job-button{
+    width: 155px; 
+    padding: 8px 32px;
+    border-radius: 20px; 
+    border: none;
+    display: inline-flex; 
+    background: #F2FFFC; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+     gap: 12px; 
+     background: none;
+}
+
+#booking-button{
+    width: 182px;
+    padding:8px 32px; 
+    background: #F2FFFC; 
+    border: none;
+
+    border-radius: 20px;
+    display: inline-flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 12px; 
+}
+
+
+.booking-active{
+    border: 1px #12B555 solid !important; 
+}
+
+.booking-title{
+    width: 100%; 
+    height: 100%; 
+    border: 1px solid #ccc; 
+    border-bottom: none; 
+    padding: 20px 25px; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 8px; 
+    display: inline-flex;
+    background-color: #fff; 
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.job-text{
+    text-align: center; 
+    color: #212121; 
+    font-size: 12px; 
+    letter-spacing: 0.20px; 
+    word-wrap: break-word;
+}
+
+
+.booking-details-header{
+    display: inline-flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 16px; 
+}
+
+.booking-details-header-text{
+    color: #383E43; 
+    font-size: 20px; 
+    font-weight: 700; 
+    line-height: 24px; 
+    word-wrap: break-word;
+}
+
+.booking-details-info{
+    display: flex;
+    width: 350px; 
+    align-self: stretch; 
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 16px; 
+}
+
+.booking-details-info-label{
+    color: #383E43; 
+    font-size: 14px; 
+    line-height: 19.60px; 
+    letter-spacing: 0.20px; 
+    word-wrap: break-word;
+}
+
+.booking-details-info-divider{
+    width: 1px; 
+    height: 100%; 
+    background-color: #E0E0E0;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 32px;
+    background: white;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 26px;
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-bottom: none;
+  }
+  
+  .image-item {
+    flex: 1 1 0;
+    align-self: stretch;
+    padding: 12px;
+    background: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    display: inline-flex;
+  }
+  
+  .image-item img {
+    width: 320px;
+    height: auto;
+  }
+
+  .payment-details-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    border: 1px #E0E0E0 solid;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+    display: inline-flex;
+  }
+  
+  .payment-detail-item {
+    align-self: stretch;
+    height: 38px;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+  }
+  
+  .payment-detail-label {
+    flex: 1 1 0;
+    color: #616161;
+    font-size: 12px;
+    font-family: Roboto;
+    font-weight: 400;
+    letter-spacing: 0.20px;
+    word-wrap: break-word;
+  }
+  
+  .payment-detail-value {
+    flex: 1 1 0;
+    text-align: right;
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 600;
+    line-height: 19.60px;
+    letter-spacing: 0.20px;
+    word-wrap: break-word;
+  }
+  
+  .payment-status,.total-payment {
+    color: #12B555;
+  }
+
+  .job-scope-container {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    display: inline-flex;
+  }
+  
+  .job-scope-item {
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+  }
+  
+  .icon-container {
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  .icon-wrapper {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+  
+  .job-description {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+    display: inline-flex;
+  }
+  
+  .job-title {
+    align-self: stretch;
+    color: #000;
+    opacity: 0.65;
+    font-size: 12px;
+    font-family: Roboto;
+    font-weight: 400;
+    letter-spacing: 0.20px;
+    word-wrap: break-word;
+  }

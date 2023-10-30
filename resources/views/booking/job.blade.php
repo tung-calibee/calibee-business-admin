@@ -1,35 +1,36 @@
 @extends('layouts.admin')
+@section('css')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/booking/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/booking/detail.css') }}">
+@endsection
 @section('content')
 <div data-testid="react17-adapter">
     <div class="gfb-root-styles_root__oFJST">
         <main class="activity_root__2BPP9">
             <section class="activity_tableArea__q2Cep" style="color: #000; background-color: #f5f5f5;">
                 <div class="bg-white rounded-[8px] overflow-hidden shadow-level-1">
-                        <div style="width: 100%; height: 100%; padding: 24px 0; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                            <a href="booking-calibeebusiness.html" style="width: 24px; height: 24px; justify-content: center; align-items: center; display: flex">
-                                <img src="{{ asset('images/Arrow - Left.svg') }}" alt="">
-                            </a>
-                            <div style="width: 25%; height: 100%; border-radius: 24px; overflow: hidden; border: 1px #E0E0E0 solid; justify-content: flex-start; align-items: center; display: inline-flex; background-color: #fff;">
-                                <button id="job-button" style="padding:8px 32px; background: #F2FFFC; border-radius: 20px; border: 1px #12B555 solid; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
-                                    <div style="text-align: center; color: #212121; font-size: 12px; letter-spacing: 0.20px; word-wrap: break-word">Job Details</div>
-                                </button>
-                                <button id="booking-button" style="width: 155px; padding: 8px 32px;border-radius: 20px; border: 1px white solid; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex; background: none;">
-                                    <div style="text-align: center; color: #212121; font-size: 12px; word-wrap: break-word">Booking Details</div>
-                                </button>
-                            </div>
+                    <div class="d-inline-flex align-items-center justify-content-start gap-3" style="width: 100%; height: 100%; padding: 24px 0;">
+                        <a href="{{route('booking.index')}}">
+                            <img src="{{ asset('images/Arrow - Left.svg') }}" alt="">
+                        </a>
+                        <div class="tabbing">
+                            <button id="job-button" class="booking-active">
+                                <a href="{{ route('booking.job') }}" class="job-text">Job Details</a>
+                            </button>
+                            <button id="booking-button">
+                                <a href="{{ route('booking.detail') }}" class="job-text">Booking Details</a>
+                            </button>
                         </div>
-
-                    <div style="width: 100%; height: 100%; border: 1px solid #ccc; border-bottom: none; padding: 20px 25px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; display: inline-flex; background-color: #fff; border-top-right-radius: 8px;border-top-left-radius: 8px;">
-                        <div style="justify-content: flex-start; align-items: center; gap: 16px; display: inline-flex">
-                            <div style="color: #383E43; font-size: 20px; font-family: Roboto; font-weight: 700; line-height: 24px; word-wrap: break-word">Job Details</div>
-                            <div></div>
+                    </div>
+                    <div class="booking-title">
+                        <div class="booking-details-header">
+                            <div class="booking-details-header-text">Booking Details</div>
                         </div>
-                        <div style="justify-content: flex-start; align-items: center; gap: 16px; display: inline-flex">
-                            <div style="width: 350px; align-self: stretch; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-                                <div style="color: #383E43; font-size: 14px; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">DK23-000918</div>
-                                <div style="width: 1px; height: 100%; background-color: #E0E0E0;">
-                                </div>
-                                <div style="color: #383E43; font-size: 14px; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">Vệ sinh định kỳ - Quý 4 - 2023</div>
+                        <div class="booking-details-header">
+                            <div class="booking-details-info">
+                                <div class="booking-details-info-label" >DK23-000918</div>
+                                <div class="booking-details-info-divider" ></div>
+                                <div class="booking-details-info-label">Vệ sinh định kỳ - Quý 4 - 2023</div>
                             </div>
                         </div>
                     </div>
@@ -122,8 +123,6 @@
                                                     style="width: 180px; min-width: 170px">
                                                 </colgroup>
                                                 <tbody class="gfbs-table-tbody">
-                                                    
-                                                   
                                                 </tbody>
                                             </table>
                                         </div>
@@ -162,25 +161,25 @@
                         </div>
                         <div class="pagination_root__2yFTb"
                             data-testid="activity-table-pagination">
-                            <div style="width: 100%; height: 100%; padding-left: 36px; padding-right: 36px; padding-top: 24px; padding-bottom: 24px; justify-content: flex-end; align-items: center; gap: 48px; display: inline-flex">
-                                <div style="justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
-                                    <div style="padding: 5px; border-radius: 4px; border: 1px #EEEEEE solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+                            <div class="pagination-container">
+                                <div class="pagination-main" style="gap: 12px;">
+                                    <div class="pagination-main pagination-icon">
                                         <div style="width: 18px; height: 18px; justify-content: center; align-items: center; display: flex">
-                                            <img  src="{{ asset('images/Left 2.svg') }}" alt="">
+                                            <img src="{{ asset('images/Arrow - Left 2.svg') }}" alt="">
                                         </div>
                                     </div>
-                                    <div style="width: 28px; padding: 4px; background: #12B555; border-radius: 4px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-                                        <div style="color: white; font-size: 10px; font-family: Roboto; font-weight: 500; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">1</div>
-                                    </div>
-                                    <div style="width: 28px; padding: 4px; border-radius: 4px; border: 1px #EEEEEE solid; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-                                        <div style="color: #616161; font-size: 10px; font-family: Roboto; font-weight: 500; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">2</div>
-                                    </div>
-                                    <div style="width: 28px; padding: 4px; border-radius: 4px; border: 1px #EEEEEE solid; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-                                        <div style="color: #616161; font-size: 10px; font-family: Roboto; font-weight: 500; line-height: 19.60px; letter-spacing: 0.20px; word-wrap: break-word">3</div>
-                                    </div>
-                                    <div style="padding: 5px; border-radius: 4px; border: 1px #EEEEEE solid; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+                                    <div class="pagination-number active">
+                                        1
+                                     </div>
+                                     <div class="pagination-number">
+                                         2
+                                     </div>
+                                     <div class="pagination-number">
+                                         3
+                                     </div>
+                                    <div class="pagination-main pagination-icon">
                                         <div style="width: 18px; height: 18px; justify-content: center; align-items: center; display: flex">
-                                            <img src="{{ asset('images/Arrow - Right 2.svg') }}" alt="">
+                                            <img src= "{{ asset('images/Arrow - Right 2.svg') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -328,15 +327,4 @@
          table.appendChild(newRow);
      });
  </script>
-<script>
-    var bookingbutton = document.getElementById('booking-button');
-    var jobbutton = document.getElementById('job-button');
-
-    bookingbutton.addEventListener('click', function(event) {
-        window.location.href = "{{ route('booking.index') }}";
-    });
-    jobbutton.addEventListener('click', function(event) {
-        window.location.href =  @php '{{ route("booking.job") }}' @endphp; 
-    });
-</script>
 @endpush

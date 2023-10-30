@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calibee for Business</title>
-    <link rel="icon" type="image/x-icon" href="{{asset('images/favicon.png') }}">
+    <title>Calibee for Enterprise</title>
+    <link rel="icon" type="image/x-icon" href="{{asset('images/favicon.svg') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,27 +21,6 @@
         @yield('content')
     </main>
     
-    <script>
-        const emailInput = document.getElementById("emailInput");
-        const passwordInput = document.getElementById("passwordInput");
-        const loginButton = document.getElementById("loginButton");
-
-        emailInput.addEventListener("input", updateButtonState);
-        passwordInput.addEventListener("input", updateButtonState);
-
-        function updateButtonState() {
-            if (emailInput.value && passwordInput.value) {
-                loginButton.removeAttribute("disabled");
-                loginButton.style.opacity = 1;
-            } else {
-                loginButton.setAttribute("disabled", true);
-                loginButton.style.opacity = 0.4;
-            }
-        }
-        loginButton.addEventListener('click', function(event) {
-            window.location.href = 'booking-calibeebusiness.html'; 
-        });
-       
-    </script>
+    @stack('login')
 </body>
 </html>
